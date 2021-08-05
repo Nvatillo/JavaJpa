@@ -21,6 +21,7 @@ public class CrudManagementServiceImpl implements CrudManagementService {
         if (Objects.nonNull(escuela.getNombre()) && Objects.nonNull(escuela.getApellido()))
         {
             escuelaRepository.save(escuela);
+            System.out.println("Prueba Git");
             return "Se agrego correctamente";
         }
         return "Debe agregar nombre y contraseña";
