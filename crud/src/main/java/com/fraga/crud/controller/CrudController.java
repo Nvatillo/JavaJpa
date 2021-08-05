@@ -20,6 +20,6 @@ public class CrudController {
 
     @PostMapping
     public ResponseEntity saveUser(@RequestBody Escuela escuela){
-        return new ResponseEntity(service.saveAccount(escuela), HttpStatus.OK);
+        return new ResponseEntity(service.saveProfesor(escuela), HttpStatus.OK);
     }
 }

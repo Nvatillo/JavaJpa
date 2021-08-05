@@ -16,15 +16,11 @@ public class CrudManagementServiceImpl implements CrudManagementService {
 
     private final EscuelaRepository escuelaRepository;
 
-    public String saveAccount(Escuela escuela) {
+    public String saveProfesor(Escuela escuela) {
 
-        if (Objects.nonNull(escuela.getNombre()) && Objects.nonNull(escuela.getApellido()))
-        {
             escuelaRepository.save(escuela);
-            System.out.println("Prueba Git");
-            System.out.println("Prueba Git 2");
-            return "Se agrego correctamente";
-        }
-        return "Debe agregar nombre y contraseña";
+        System.out.println("jkjfdkssd");
+            return "ok";
+
     }
 }
