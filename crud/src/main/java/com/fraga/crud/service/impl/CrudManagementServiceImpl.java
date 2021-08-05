@@ -22,6 +22,7 @@ public class CrudManagementServiceImpl implements CrudManagementService {
         {
             escuelaRepository.save(escuela);
             System.out.println("Prueba Git");
+            System.out.println("Prueba Git 2");
             return "Se agrego correctamente";
         }
         return "Debe agregar nombre y contraseña";
