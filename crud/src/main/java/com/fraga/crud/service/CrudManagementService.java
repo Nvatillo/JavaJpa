@@ -4,5 +4,7 @@ import com.fraga.crud.model.Escuela;
 
 public interface CrudManagementService {
 
-    String saveProfesor(Escuela escuela);
+
+    String guardarProfesor(Escuela escuela);
+
 }

@@ -16,10 +16,14 @@ public class CrudManagementServiceImpl implements CrudManagementService {
 
     private final EscuelaRepository escuelaRepository;
 
-    public String saveProfesor(Escuela escuela) {
 
+    public String guardarProfesor(Escuela escuela) {
+
+            System.out.println("Conflictos");
+            System.out.println("Test Confli" +
+                "");
             escuelaRepository.save(escuela);
-        System.out.println("jkjfdkssd");
+
             return "ok";
 
     }
