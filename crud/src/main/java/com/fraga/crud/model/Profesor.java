@@ -5,10 +5,10 @@ import lombok.Data;
 import javax.persistence.*;
 
 
-@Table(name = "profesor")
+
 @Entity
 @Data
-public class Escuela {
+public class Profesor {
 
 
     @Id
