@@ -16,14 +16,26 @@ public class CrudController {
     private CrudManagementServiceImpl service;
 
     @PostMapping
-    public ResponseEntity saveUser(@RequestBody Profesor profesor){
+    public ResponseEntity saveProfesor(@RequestBody Profesor profesor){
 
         return new ResponseEntity(service.guardarProfesor(profesor), HttpStatus.OK);
     }
 
-    @PutMapping("/update")
-    public ResponseEntity updateUser(@RequestBody Profesor escuela)
+    @DeleteMapping("/eliminar")
+    public ResponseEntity eliminarProfesor(@RequestBody Profesor profesor)
+    {
+        return new ResponseEntity(service.eliminarProfesor(profesor),HttpStatus.OK);
+    }
+
+    @PutMapping("/actualizar")
+    public ResponseEntity actualizarProfesor(@RequestBody Profesor escuela)
     {
         return new ResponseEntity(service.editarProfesor(escuela),HttpStatus.OK);
+    }
+
+    @GetMapping("/listar")
+    public ResponseEntity actualizarProfesor()
+    {
+        return new ResponseEntity(service.listar(),HttpStatus.OK);
     }
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 
 
-
 @Entity
 @Data
 public class Profesor {
@@ -13,8 +12,7 @@ public class Profesor {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
-
+    private int id;
     //@Name()
     private String nombre;
     private String apellido;
