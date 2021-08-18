@@ -1,6 +1,7 @@
 package com.fraga.crud.controller;
 
 
+import com.fraga.crud.dto.ProfesorDto;
 import com.fraga.crud.model.Profesor;
 import com.fraga.crud.service.impl.CrudManagementServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,21 +17,21 @@ public class CrudController {
     private CrudManagementServiceImpl service;
 
     @PostMapping
-    public ResponseEntity saveProfesor(@RequestBody Profesor profesor){
+    public ResponseEntity saveProfesor(@RequestBody ProfesorDto profesorDto){
 
-        return new ResponseEntity(service.guardarProfesor(profesor), HttpStatus.OK);
+        return new ResponseEntity(service.guardarProfesor(profesorDto), HttpStatus.OK);
     }
 
-    @DeleteMapping("/eliminar")
-    public ResponseEntity eliminarProfesor(@RequestBody Profesor profesor)
+    @DeleteMapping("/eliminar/{id}")
+    public ResponseEntity eliminarProfesor(@PathVariable Integer id )
     {
-        return new ResponseEntity(service.eliminarProfesor(profesor),HttpStatus.OK);
+        return new ResponseEntity(service.eliminarProfesor(id),HttpStatus.OK);
     }
 
     @PutMapping("/actualizar")
-    public ResponseEntity actualizarProfesor(@RequestBody Profesor escuela)
+    public ResponseEntity actualizarProfesor(@RequestBody ProfesorDto profesorDto)
     {
-        return new ResponseEntity(service.editarProfesor(escuela),HttpStatus.OK);
+        return new ResponseEntity(service.editarProfesor(profesorDto),HttpStatus.OK);
     }
 
     @GetMapping("/listar")

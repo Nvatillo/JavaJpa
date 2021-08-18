@@ -1,5 +1,6 @@
 package com.fraga.crud.service;
 
+import com.fraga.crud.dto.ProfesorDto;
 import com.fraga.crud.model.Profesor;
 
 import java.util.List;
@@ -7,11 +8,11 @@ import java.util.List;
 public interface CrudManagementService {
 
 
-    String guardarProfesor(Profesor profesor);
+    String guardarProfesor(ProfesorDto profesorDto);
 
-    String editarProfesor(Profesor profesor);
+    String editarProfesor(ProfesorDto profesorDto);
 
-    String eliminarProfesor(Profesor profesor);
+    String eliminarProfesor(Integer id);
 
     List<Profesor> listar();
 }
